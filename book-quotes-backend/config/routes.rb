@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :users
   resources :quotes
   resources :books
-  get '/test', to: 'application#test'
+  
 end
 
