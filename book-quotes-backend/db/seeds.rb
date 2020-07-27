@@ -23,3 +23,5 @@
 #Quote.create(content: 'Travel far enough, you meet yourself', book: Book.find(14))
 Book.create(title: 'The Vampire Lestat', author: 'Anne Rice', genre: 'fiction')
 Quote.create(content: 'None of us really changes over time. We only become more fully what we are.', book: Book.find(15))
+
+#faker gem 
