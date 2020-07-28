@@ -25,10 +25,9 @@ ActiveRecord::Schema.define(version: 2020_07_27_211156) do
 
   create_table "quotes", force: :cascade do |t|
     t.string "content"
-    t.bigint "book_id"
+    t.integer "book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_id"], name: "index_quotes_on_book_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -3,14 +3,14 @@ class QuotesController < ApplicationController
 
   # GET /quotes
   def index
-    @quotes = Quote.all
+    quotes = Quote.all
 
-    render json: @quotes
+    render json: quotes, include: [:book]
   end
 
   # GET /quotes/1
   def show
-    render json: @quote
+    render json: @quote, include: :book
   end
 
   # POST /quotes

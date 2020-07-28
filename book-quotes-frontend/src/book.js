@@ -4,5 +4,6 @@ class Book{
         this.author = author;
         this.genre = genre;
     }
-    //instance method that will render object to DOM
+    //instance method that will render object 
+    
 }
