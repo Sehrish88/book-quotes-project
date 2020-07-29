@@ -16,7 +16,9 @@ class QuotesController < ApplicationController
   # POST /quotes
   def create
     @quote = Quote.new(quote_params)
+    @quote.build_book(title: params[:title], author: params[:author], genre: params[:genre])
 
+  
     if @quote.save
       render json: @quote, status: :created, location: @quote
     else
@@ -46,6 +48,6 @@ class QuotesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def quote_params
-      params.require(:quote).permit(:content)
+      params.require(:quote).permit(:content, :book, :title, :author, :genre) 
     end
 end

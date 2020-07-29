@@ -1,8 +1,9 @@
 class Quote{
-    constructor(id, content){
+    constructor(id, content, book){
         
         this.id = id
         this.content = content;
+        this.book = book
         
        
     }
@@ -13,8 +14,8 @@ class Quote{
         quotesDiv.innerHTML +=
         `
         <ul>
-        <li> ${this.id} - ${this.content}</li>
+        <li> ${this.id} - <i><b>${this.content}</i></b> - (<b>${this.book.title}</b>, ${this.book.author}, ${this.book.genre}) </li>
         </ul>
         `
-    }
+    } 
 }
