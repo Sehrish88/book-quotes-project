@@ -13,9 +13,9 @@ function fetchQuotes(){
     .then(quotes => {
         for (const quote of quotes){
             //debugger 
-            console.log("rails object", quote)
+            //console.log("rails object", quote)
             let q = new Quote(quote.id, quote.content, quote.book) 
-            console.log("jsObject", q)
+            //console.log("jsObject", q)
             q.renderQuote();
         }
     })
@@ -36,6 +36,7 @@ function createQuoteForm(){
     Author: <input type="text" id="author" value=" ">
     Genre: <input type="text" id="genre" value=" ">
     <input type="submit" value="Create Quote">
+    <button type="reset">reset</button>
     </form>
     `
     //let quoteForm = document.getElementById("quotes-form")
@@ -78,7 +79,27 @@ function quoteFormSubmission(){
     })
 } 
 
-
-
-
 //delete a quote 
+
+
+
+// let deleteButtons = document.getElementsByClassName("delete-bttn")
+
+// for (const button of deleteButtons){
+//     button.addEventListener("click", () => {
+//         debugger;
+//     })
+// };
+
+function deleteQuote(){
+    //debugger;
+    let quoteId = parseInt(event.target.dataset.id)
+
+    fetch(`${BASE_URL}/quotes/${quoteId}`, {
+        method: 'DELETE'
+    })
+
+    this.location.reload()
+
+};
+
