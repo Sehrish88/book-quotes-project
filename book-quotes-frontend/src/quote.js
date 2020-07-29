@@ -11,11 +11,15 @@ class Quote{
     renderQuote(){
         let quotesDiv = document.getElementById("quotes-container")
         
-        quotesDiv.innerHTML +=
+       const addedquotes =  
         `
         <ul>
-        <li> ${this.id} - <i><b>${this.content}</i></b> - (<b>${this.book.title}</b>, ${this.book.author}, ${this.book.genre}) </li>
+        <li id="quote"> ${this.id} - <i><b>${this.content}</i></b> - (<b>${this.book.title}</b>, ${this.book.author}, ${this.book.genre}) </li>
         </ul>
         `
+        quotesDiv.innerHTML +=  addedquotes
+
+        console.log("somehting is hppening")
+        
     } 
-}
+} 
