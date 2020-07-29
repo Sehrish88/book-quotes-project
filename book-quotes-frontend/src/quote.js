@@ -19,7 +19,7 @@ class Quote{
         `
         quotesDiv.innerHTML +=  addedquotes
 
-        console.log("somehting is hppening")
+        
         
     } 
 } 
