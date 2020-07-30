@@ -31,13 +31,13 @@ function createQuoteForm(){
     quoteForm.innerHTML +=
     `
     <form> 
-    Quote: <input type="text" id="content" value=" ">
-    Book Title: <input type="text" id="title" value =" ">
-    Author: <input type="text" id="author" value=" ">
-    Genre: <input type="text" id="genre" value=" ">
+    <b>Quote:</b> <input type="text" id="content" value=" ">
+    <b>Book Title:</b> <input type="text" id="title" value =" ">
+    <b>Author:</b> <input type="text" id="author" value=" ">
+    <b>Genre:</b> <input type="text" id="genre" value=" ">
     <input type="submit" value="Create Quote">
-    <button type="reset">reset</button>
-    </form>
+    <button type="reset">Clear</button>
+    </form><br><br>
     `
     //let quoteForm = document.getElementById("quotes-form")
     quoteForm.addEventListener("submit", quoteFormSubmission)
@@ -94,12 +94,15 @@ function quoteFormSubmission(){
 function deleteQuote(){
     //debugger;
     let quoteId = parseInt(event.target.dataset.id)
+    let quoteItem = event.target.parentElement
 
     fetch(`${BASE_URL}/quotes/${quoteId}`, {
         method: 'DELETE'
     })
-
-    this.location.reload()
+    quoteItem.remove()
+    
+    //debugger 
+    
 
 };
 
