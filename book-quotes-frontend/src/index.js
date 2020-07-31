@@ -82,15 +82,6 @@ function quoteFormSubmission(){
 //delete a quote 
 
 
-
-// let deleteButtons = document.getElementsByClassName("delete-bttn")
-
-// for (const button of deleteButtons){
-//     button.addEventListener("click", () => {
-//         debugger;
-//     })
-// };
-
 function deleteQuote(){
     //debugger;
     let quoteId = parseInt(event.target.dataset.id)
