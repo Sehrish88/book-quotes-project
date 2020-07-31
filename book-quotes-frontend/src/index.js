@@ -36,7 +36,7 @@ function createQuoteForm(){
     <b>Author:</b> <input type="text" id="author" value=" ">
     <b>Genre:</b> <input type="text" id="genre" value=" ">
     <input type="submit" value="Create Quote">
-    <button type="reset">Clear</button>
+    <button type="reset">Clear Form</button>
     </form><br><br>
     `
     //let quoteForm = document.getElementById("quotes-form")
