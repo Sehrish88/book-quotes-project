@@ -35,6 +35,6 @@ ActiveRecord::Schema.define(version: 2020_07_27_211156) do
     t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
+  end 
 
 end
