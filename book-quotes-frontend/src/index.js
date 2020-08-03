@@ -30,13 +30,13 @@ function createQuoteForm(){
     let quoteForm = document.getElementById("quotes-form")
     quoteForm.innerHTML +=
     `
-    <form> 
+    <form id="quote-form"> 
     <b>Quote:</b> <input type="text" id="content" value=" ">
     <b>Book Title:</b> <input type="text" id="title" value =" ">
     <b>Author:</b> <input type="text" id="author" value=" ">
     <b>Genre:</b> <input type="text" id="genre" value=" ">
     <input type="submit" value="Create Quote">
-    <button type="reset">Clear Form</button>
+
     </form><br><br>
     `
     //let quoteForm = document.getElementById("quotes-form")
@@ -51,6 +51,7 @@ function quoteFormSubmission(){
     let title = document.getElementById("title").value 
     let author = document.getElementById("author").value 
     let genre = document.getElementById("genre").value 
+    let form = document.getElementById("quote-form")
 
     //console.log(content, title, author, genre)
     let quote = {
@@ -77,6 +78,7 @@ function quoteFormSubmission(){
         let q = new Quote(quote.id, quote.content, quote.book)
         q.renderQuote();
     })
+    form.reset();
 } 
 
 //delete a quote 
